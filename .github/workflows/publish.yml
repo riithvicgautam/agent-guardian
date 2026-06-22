@@ -82,7 +82,7 @@ jobs:
         # Standard §4.3 — keyless signing via Sigstore (Fulcio short-lived
         # certs + Rekor transparency log). Anyone can verify with
         # ``sigstore verify`` against the published workflow identity.
-        uses: sigstore/gh-action-sigstore-python@04cffa1d795717b140764e8b640de88853c92acc  # v3.3.0
+        uses: sigstore/gh-action-sigstore-python@5b79a39c381910c090341a2c9b0bf022c8b387e1  # v3.4.0
         with:
           inputs: |
             dist/*.whl
@@ -94,7 +94,7 @@ jobs:
         # attestations. Keep this alongside Sigstore signatures and PyPI
         # PEP 740 attestations so future releases carry verifiable provenance
         # at GitHub, PyPI, and standalone artifact levels.
-        uses: actions/attest-build-provenance@43d14bc2b83dec42d39ecae14e916627a18bb661  # v3
+        uses: actions/attest-build-provenance@977bb373ede98d70efdf65b84cb5f73e068dcc2a  # v3
         with:
           subject-path: |
             dist/*.whl
