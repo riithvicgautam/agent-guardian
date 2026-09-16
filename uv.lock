@@ -15,6 +15,7 @@ dependencies = [
     { name = "httpx" },
     { name = "jinja2" },
     { name = "jsonschema" },
+    { name = "posthog" },
     { name = "pydantic" },
     { name = "pyyaml" },
     { name = "reportlab" },
@@ -76,7 +77,7 @@ full = [
     { name = "weasyprint" },
 ]
 gcp = [
-    { name = "google-auth" },
+    { name = "google-auth", extra = ["requests"] },
 ]
 grpc = [
     { name = "grpcio" },
@@ -102,7 +103,7 @@ requires-dist = [
     { name = "exceptiongroup", marker = "python_full_version < '3.11'", specifier = ">=1.2" },
     { name = "faiss-cpu", marker = "extra == 'full'", specifier = ">=1.9" },
     { name = "fastapi", specifier = ">=0.115" },
-    { name = "google-auth", marker = "extra == 'gcp'", specifier = ">=2.0" },
+    { name = "google-auth", extras = ["requests"], marker = "extra == 'gcp'", specifier = ">=2.0" },
     { name = "grpcio", marker = "extra == 'grpc'", specifier = ">=1.60" },
     { name = "httpx", specifier = ">=0.28" },
     { name = "hypothesis", marker = "extra == 'dev'", specifier = ">=6.115" },
@@ -124,6 +125,7 @@ requires-dist = [
     { name = "pip-licenses", marker = "extra == 'dev'", specifier = ">=5.0" },
     { name = "playwright", marker = "extra == 'browser'", specifier = ">=1.40" },
     { name = "playwright", marker = "extra == 'dev'", specifier = ">=1.50" },
+    { name = "posthog", specifier = ">=5.4.0" },
     { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=4.0" },
     { name = "presidio-analyzer", marker = "extra == 'full'", specifier = ">=2.2" },
     { name = "pydantic", specifier = ">=2.9" },
